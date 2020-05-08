@@ -1,8 +1,2 @@
 shell 命令总结 
 
-给权限
-chmod 777 xxx
-运行代码
-./xxx
-后台运行
-./xxx &
