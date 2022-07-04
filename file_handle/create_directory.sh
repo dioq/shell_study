@@ -1,7 +1,7 @@
 <<!
 批量创建文件目录
 !
-path=./test2
+path=./target_test
 del_arr=("Watch" "Plugins" "_CodeSignature")
 for item in ${del_arr[*]}
 do

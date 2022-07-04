@@ -1,9 +1,10 @@
 #!/bin/bash
 
+# 递归遍历所有的 directory
 read_dir(){
     for file in `ls -a $1`
     do
-        if [ -d $1"/"$file ]
+        if [ -d $1"/"$file ] # 判断是 directiory
         then
             if [[ $file != '.' && $file != '..' ]]
             then
