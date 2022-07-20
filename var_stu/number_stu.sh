@@ -8,5 +8,5 @@ n=`expr 2`
 echo $n
 
 # 数字运算,注意不能有空格
-let i=$n+1
-echo $i
+let n=$n+1
+echo $n
