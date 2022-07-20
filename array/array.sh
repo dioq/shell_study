@@ -12,3 +12,6 @@ for i in ${arr2[*]}
 do
     echo $i
 done
+
+# 根据下标取元素
+echo ${arr2[1]}
