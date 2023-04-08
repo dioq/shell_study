@@ -1,8 +1,11 @@
 <<!
 数组定义和遍历
 !
-array=(1 2 3 4 5)
-for i in ${array[*]}
+
+arr1=(10 11 12 13 14 15)
+count=${#arr1[*]}   # 获取数组元素个数
+echo "arr1 count:$count"
+for i in ${arr1[*]}
 do
     echo $i
 done

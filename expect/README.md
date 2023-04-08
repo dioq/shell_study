@@ -8,4 +8,3 @@ spawn：启动新的进程，后面可接shell命令
 expect：从进程接收字符串
 send：用于向进程发送字符串 
 interact：允许用户交互
-

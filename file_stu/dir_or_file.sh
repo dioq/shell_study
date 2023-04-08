@@ -7,5 +7,5 @@ elif [ -f $path ] # 判断是否为 file
 then
 	echo "is file"
 else
-	echo "other"
+	echo "not exist"
 fi
