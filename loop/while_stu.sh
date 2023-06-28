@@ -1,8 +1,7 @@
 #!/bin/bash
 i=1
 sum=0
-while ((i <= 100))
-do
+while ((i <= 100)); do
     ((sum += i))
     ((i++))
 done

@@ -19,7 +19,6 @@ map["bb"]="BB"
 echo ${!map[*]}
 # 输出所有value
 echo ${map[*]}
-for key in ${!map[*]}
-do
+for key in ${!map[*]}; do
     echo "${key}:${map[$key]}"
 done

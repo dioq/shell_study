@@ -1,6 +1,9 @@
+#!/bin/bash
 
-path=""
+path="/var/test"
 sum=0
+
+echo "path = ${path}"
 
 readDir() {
 	path=$1

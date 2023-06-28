@@ -1,9 +1,9 @@
 #!/bin/bash
 
-funWithReturn(){
-	val=`expr $1 + $2` 
-	return ${val}  
-} 
+funWithReturn() {
+	val=$(expr $1 + $2)
+	return ${val}
+}
 funWithReturn 10 20
 
 ret=$?

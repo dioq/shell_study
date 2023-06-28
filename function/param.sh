@@ -1,4 +1,5 @@
-funWithParam(){
+#!/bin/bash
+funWithParam() {
     echo "第一个参数为 $1 !"
     echo "第二个参数为 $2 !"
     echo "第十个参数为 $10 !"

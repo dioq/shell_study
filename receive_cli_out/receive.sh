@@ -10,7 +10,7 @@ security find-identity -v -p codesigning
 certs=$(security find-identity -v -p codesigning)
 
 # 计算有效行数
-line_count=$(( $(echo "$certs" | wc -l) - 1 ))
+line_count=$(($(echo "$certs" | wc -l) - 1))
 # echo $line_count
 # 删除无用行
 certs=$(echo "$certs" | head -n $line_count)
@@ -25,14 +25,12 @@ TEAMID="38D3676P2T"
 
 name=""
 # num=0
-array=(`echo $certs | tr '\n' ' '` )
-for line in ${array[*]}
-do
+array=($(echo $certs | tr '\n' ' '))
+for line in ${array[*]}; do
     # echo "index:${num}"
     # echo $i
     # num=$((1+$num))
-    if [[ $line == *${TEAMID}* ]]
-    then
+    if [[ $line == *${TEAMID}* ]]; then
         # echo $line
         string=${line##*"Distribution:"}
         # echo $string
@@ -42,19 +40,15 @@ do
 done
 
 declare -A map=()
-for line in ${array[*]}
-do
-    if [[ $line == *${name}* ]]
-    then
-        if [[ $line == *"Distribution"* ]]
-        then
+for line in ${array[*]}; do
+    if [[ $line == *${name}* ]]; then
+        if [[ $line == *"Distribution"* ]]; then
             string=${line#*")"}
             # echo $string
             string=${string%"\"Apple"*}
             # echo $string
             map["Distribution"]=$string
-        elif [[ $line == *"AppleDevelopment"* ]]
-        then
+        elif [[ $line == *"AppleDevelopment"* ]]; then
             string=${line#*")"}
             echo $string
             string=${string%"\"Apple"*}
@@ -63,7 +57,6 @@ do
     fi
 done
 
-for key in ${!map[*]}
-do
+for key in ${!map[*]}; do
     echo "${key}:${map[$key]}"
 done

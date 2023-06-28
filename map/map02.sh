@@ -14,13 +14,11 @@ map["5"]="26"
 map["aa"]="AA"
 map["bb"]="BB"
 
-
 # 输出所有key
 echo ${!map[*]}
 # 输出所有value
 echo ${map[*]}
 # 输出key对应的值
-for key in ${!map[*]}
-do
+for key in ${!map[*]}; do
     echo "${key}:${map[$key]}"
 done

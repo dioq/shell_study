@@ -1,4 +1,4 @@
-
+#!/bin/bash
 echo "--------------> main <-------------"
 echo "Hello,this is main shell."
 
