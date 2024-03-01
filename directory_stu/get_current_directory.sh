@@ -1,3 +1,4 @@
+#!/bin/bash
 
 CurrentDir="$(pwd)"
 echo $CurrentDir

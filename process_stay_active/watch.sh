@@ -2,14 +2,14 @@
 
 # 检查进程是否存活,如果不存活就重启。可以在定时任务中每分种运行一下这个 shell
 
-exec_path=/home/zd/project/main.py
-log_path=/var/log/zd_ipa.log
+work_path=/home/zd/project/main.py
+work_log=/var/log/work.log
+watch_log=/var/log/watch.log
 
-process=$(ps aux | grep ${exec_path} | grep -v grep)
-echo $process >> ${log_path}
+process=$(ps aux | grep ${work_path} | grep -v grep)
 if [ "$process" == "" ]; then
-	echo "process has exist. I am restarting the main.py process ..." >> ${log_path}
-        nohup ${exec_path} &
+        echo "$work_path has exist. It was restarted." >>${watch_log}
+        ${work_path} >>${work_log}
 else
-        echo "process was running ..." >> ${log_path}
+        echo "$process" >>${watch_log}
 fi
