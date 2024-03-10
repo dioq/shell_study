@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "start ..."
 
 # 等待 20 秒
